@@ -1,0 +1,23 @@
+@use '../../../ui/styles/variables.scss' as variables;
+@use '../../../ui/styles/mixins.scss' as mixins;
+
+.code-container {
+    @include mixins.container(space-evenly);
+    height: 44px;
+    line-height: 1;
+    background: variables.$smoky-gray;
+    width: 115%;
+    border-radius: 30px;
+    margin-top: 30px;
+
+    &__text {
+        @include mixins.text(15px);
+    }
+
+    &__button {
+        background-color: transparent;
+        color: #ffffff59;
+        border: none;
+        cursor: pointer;
+    }
+}

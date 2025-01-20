@@ -1,0 +1,37 @@
+@use '../../../ui/styles/variables.scss' as variables;
+@use '../../../ui/styles/mixins.scss' as mixins;
+
+.hero-container {
+    @include mixins.container-grid(normal, 10px);
+    justify-items: center;
+    line-height: 1;
+
+    &__title {
+        @include mixins.text(40px, #677aff);
+        font-weight: 800;
+    }
+
+    &__second-title {
+        @include mixins.text(50px);
+        font-weight: 800;
+        letter-spacing: -0.65px;
+    }
+
+    &__text {
+        @include mixins.text(30px);
+    }
+
+    &__button {
+        @include mixins.button(30px, 15px 25px 15px 25px, #ffffffd9);
+        @include mixins.font(15px, 800);
+        background-image: linear-gradient(to right, #3898ff, #7a70ff);
+        text-decoration: none;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

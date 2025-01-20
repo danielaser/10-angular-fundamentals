@@ -1,0 +1,68 @@
+@use '../../../ui/styles/variables.scss' as variables;
+@use '../../../ui/styles/mixins.scss' as mixins;
+
+.team-container {
+    margin-top: 70px;
+    justify-items: center;
+
+    &__text {
+        @include mixins.text(24px);
+        width: 60%;
+        text-align: center;
+    }
+}
+
+.bento {
+    @include mixins.container-grid(start, 30px);
+    margin: 40px auto;
+    max-width: 940px;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__item {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        color: #ffffffc8;
+        font-size: 18px;
+        text-decoration: none;
+        justify-items: center;
+
+        img {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    $distributions: (
+        1: 1 / 2,
+        2: 2 / 4,
+        3: 4 / 6,
+        4: 6 / 8,
+        5: 8 / 10,
+        6: 10 / 12,
+        7: 1 / 2,
+        8: 2 / 4,
+        9: 4 / 6,
+        10: 6 / 8,
+        11: 8 / 10,
+        12: 10 / 12,
+        13: 1 / 2,
+        14: 2 / 4,
+        15: 4 / 6,
+        16: 6 / 8,
+        17: 8 / 10,
+        18: 10 / 12,
+        19: 1 / 2,
+        20: 2 / 4,
+        21: 4 / 6,
+        22: 6 / 8,
+        23: 8 / 10,
+        24: 10 / 12,
+    );
+
+@each $key, $value in $distributions {
+    & :nth-child(#{$key}) {
+        grid-column: $value;
+    }
+}
+}

@@ -1,0 +1,58 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.workers-container {
+    background-color: #1b1c1e;
+    text-align: center;
+    padding-bottom: 120px;
+
+    button {
+        @include mixins.button(30px, 15px 25px 15px 25px);
+        @include mixins.font(15px, 600);
+        background-color: #3b84e4;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.developers-container {
+    text-align: center;
+    gap: 10px;
+    line-height: 1;
+    padding: 120px 120px 80px 120px;
+    justify-items: center;
+
+    &__title {
+        @include mixins.text(50px);
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        @include mixins.text(25px);
+        font-weight: 700;
+        letter-spacing: -0.65px;
+        width: 58%;
+    }
+}
+
+.list-container {
+    display: flex;
+    padding: 0px 390px 100px 390px;
+}
+
+.list {
+    padding-inline: 50px;
+    color: variables.$white;
+    list-style: none;
+
+    li {
+        display: flex;
+        gap: 10px;
+    }
+}
