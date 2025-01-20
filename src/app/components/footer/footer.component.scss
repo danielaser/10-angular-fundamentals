@@ -1,0 +1,27 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+
+.footer-links {
+    text-align: center;
+    padding-bottom: 120px;
+    list-style: none;
+    line-height: 2;
+
+    a {
+        text-decoration: none;
+        @include mixins.font(22px, 700);
+        color: #1b1d1fb3;
+        cursor: pointer;
+    }
+
+    :hover {
+        color: variables.$dark-blue;
+    }
+
+    &__text {
+        @include mixins.text(22px, #1b1d1f80);
+        font-weight: 700;
+        pointer-events: none;
+    }
+}

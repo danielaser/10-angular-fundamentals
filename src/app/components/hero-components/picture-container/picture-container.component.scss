@@ -1,0 +1,25 @@
+@use '../../../ui/styles/variables.scss' as variables;
+@use '../../../ui/styles/mixins.scss' as mixins;
+
+.picture-container {
+    position: relative;
+    top: 70px;
+
+    &__first-img {
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__second-img {
+        position: relative;
+        z-index: 2;
+        margin-left: 510px;
+    }
+
+    &__third-img {
+        position: relative;
+        z-index: 3;
+        bottom: 30px;
+        margin-left: -150px;
+    }
+}
