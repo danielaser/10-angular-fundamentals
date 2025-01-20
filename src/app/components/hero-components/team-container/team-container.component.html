@@ -1,0 +1,14 @@
+<div class="team-container">
+    <p class="team-container__text">
+        The sickest Web3 teams are using RainbowKit to improve their products, delight their users, and save time when
+        building.
+    </p>
+    <div class="bento">
+        <div class="bento__item" *ngFor="let team of teams">
+            <i aria-hidden="true">
+                <img [src]="team.img" [alt]="team.name + ' website logo image'">
+            </i>
+            <h5>{{ team.name }}</h5>
+        </div>
+    </div>
+</div>

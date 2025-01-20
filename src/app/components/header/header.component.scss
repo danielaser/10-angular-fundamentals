@@ -1,0 +1,46 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.header {
+    @include mixins.container(space-between);
+    padding: 25px;
+    width: 1490px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+
+    &__title {
+        @include mixins.text(20px);
+    }
+
+    &__badge {
+        @include mixins.font(12px, 600);
+        background-color: variables.$smoky-gray;
+        color: #ffffff7a;
+        height: 22px;
+        line-height: 1;
+        padding: 7px;
+        border-radius: 15px;
+    }
+
+    &__button {
+        @include mixins.button(10px, 10px 14px 10px 14px);
+        @include mixins.font(15px, 600);
+        background: #3898ff;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.navigation {
+    @include mixins.container-gap(15px);
+
+    &__item {
+        border-radius: 30%;
+    }
+}
