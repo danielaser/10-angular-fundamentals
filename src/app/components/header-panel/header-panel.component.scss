@@ -1,0 +1,22 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.panel-header {
+    text-align: right;
+
+    &__button {
+        @include mixins.button(50%, 8px 10px 5px 10px, variables.$smoky-gray);
+        border: none;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}

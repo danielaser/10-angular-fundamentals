@@ -1,72 +1,11 @@
 <article class="panel-content" [style.backgroundColor]="panelBackground" [style.borderRadius]="panelRadius">
     <div class="panel-nav">
         <h3 tabindex="1">Connect Wallet</h3>
-        <menu tabindex="2" class="menu">
-            <li>
-                <h5>Popular</h5>
-                <div>
-                    <menu class="sub-menu">
-                        <li class="sub-menu__item" *ngFor="let menu of menus">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use [attr.xlink:href]="menu.icon"></use>
-                                </svg>
-                            </i>
-                            <h4>{{ menu.name }}</h4>
-                        </li>
-                    </menu>
-                </div>
-            </li>
-            <li>
-                <h5>More</h5>
-                <div>
-                    <menu class="sub-menu">
-                        <li class="sub-menu__item" *ngFor="let menu of moreMenus">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use [attr.xlink:href]="menu.icon"></use>
-                                </svg>
-                            </i>
-                            <h4>{{ menu.name }}</h4>
-                        </li>
-                    </menu>
-                </div>
-            </li>
-        </menu>
+        <app-menu-panel></app-menu-panel>
     </div>
     <div tabindex="3" class="panel-information">
-        <header>
-            <button aria-label="Close" class="panel-information__button">
-                <svg>
-                    <use xlink:href="svg/close.svg#close"></use>
-                </svg>
-            </button>
-        </header>
-        <main>
-            <h4>What is a Wallet?</h4>
-            <div class="banner-container">
-                <article class="banner-container__banner">
-                    <svg width="120px" height="120px">
-                        <use xlink:href="svg/asset.svg#asset"></use>
-                    </svg>
-                    <div>
-                        <h5>A Home for your Digital Assets</h5>
-                        <p>Wallets are used to send, receive, store, and display digital assets like Ethereum and
-                            NFTs.</p>
-                    </div>
-                </article>
-                <article class="banner-container__banner">
-                    <svg width="120px" height="120px">
-                        <use xlink:href="svg/log.svg#log"></use>
-                    </svg>
-                    <div>
-                        <h5>A New Way to Log In</h5>
-                        <p>Instead of creating new accounts and passwords on every website, just connect your
-                            wallet.</p>
-                    </div>
-                </article>
-            </div>
-        </main>
+        <app-header-panel></app-header-panel>
+        <app-main-panel></app-main-panel>
         <footer>
             <button>Get a Wallet</button>
             <span>Learn More</span>

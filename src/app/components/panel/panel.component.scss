@@ -25,87 +25,9 @@
     }
 }
 
-.menu {
-    list-style: none;
-    padding-bottom: 20px;
-
-    h5 {
-        margin-top: 20px;
-        color: variables.$gray;
-        font-size: 14px;
-    }
-
-    i {
-        height: 30px;
-        border: 1px solid #c2bcbc52;
-        border-radius: 8px;
-    }
-
-    svg {
-        border-radius: 8px;
-    }
-}
-
-.sub-menu {
-    list-style: none;
-
-    &__item {
-        @include mixins.container-gap(10px);
-        margin-top: 10px;
-    }
-
-    svg {
-        width: 28px;
-        height: 28px;
-    }
-}
 
 .panel-information {
     padding-left: 20px;
-
-    header {
-        text-align: right;
-    }
-
-    &__button {
-        @include mixins.button(50%, 8px 10px 5px 10px, variables.$smoky-gray);
-        border: none;
-        cursor: pointer;
-        transition: 0.5s transform;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        svg {
-            width: 10px;
-            height: 10px;
-        }
-    }
-
-    main {
-        justify-items: center;
-        margin-top: 20px;
-    }
-
-    .banner-container {
-        justify-items: center;
-        margin-top: 25px;
-
-        &__banner {
-            @include mixins.container-gap(10px);
-            width: 70%;
-
-            h5 {
-                font-size: 15px;
-            }
-
-            p {
-                color: variables.$gray;
-                font-size: 14px;
-            }
-        }
-    }
 
     footer {
         @include mixins.container-grid(space-evenly, 10px);
