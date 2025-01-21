@@ -1,0 +1,32 @@
+<menu tabindex="2" class="menu">
+    <li>
+        <h5>Popular</h5>
+        <div>
+            <menu class="sub-menu">
+                <li class="sub-menu__item" *ngFor="let menu of menus">
+                    <i aria-hidden="true">
+                        <svg>
+                            <use [attr.xlink:href]="menu.icon"></use>
+                        </svg>
+                    </i>
+                    <h4>{{ menu.name }}</h4>
+                </li>
+            </menu>
+        </div>
+    </li>
+    <li>
+        <h5>More</h5>
+        <div>
+            <menu class="sub-menu">
+                <li class="sub-menu__item" *ngFor="let menu of moreMenus">
+                    <i aria-hidden="true">
+                        <svg>
+                            <use [attr.xlink:href]="menu.icon"></use>
+                        </svg>
+                    </i>
+                    <h4>{{ menu.name }}</h4>
+                </li>
+            </menu>
+        </div>
+    </li>
+</menu>

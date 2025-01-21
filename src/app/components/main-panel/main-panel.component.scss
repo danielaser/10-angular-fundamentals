@@ -1,0 +1,26 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+main {
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.banner-container {
+    justify-items: center;
+    margin-top: 25px;
+
+    &__banner {
+        @include mixins.container-gap(10px);
+        width: 70%;
+
+        h5 {
+            font-size: 15px;
+        }
+
+        p {
+            color: variables.$gray;
+            font-size: 14px;
+        }
+    }
+}

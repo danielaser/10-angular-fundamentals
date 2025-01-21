@@ -6,22 +6,50 @@
     background-color: variables.$blue;
 }
 
-.information-container {
-    text-align: center;
-    gap: 10px;
-    line-height: 1;
-    padding-inline: 250px;
-    margin-bottom: 70px;
+.panel {
+    justify-items: center;
+}
 
-    &__title {
-        @include mixins.text(50px);
-        font-weight: 800;
-        margin-bottom: 40px;
+
+.options {
+    margin-top: 50px;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
     }
 
     &__text {
-        @include mixins.text(25px);
+        @include mixins.text(22px, #80a7f0);
+        font-weight: 800;
+        margin-bottom: 10px;
+    }
+
+    &__button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.12);
+        background: #ffffff52;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: 0.5s transform;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &[aria-selected='true'] {
+            outline: 4px solid #ffffff;
+            outline-offset: 4px;
+            transform: scale(1);
+        }
+    }
+
+    &__button-text {
+        @include mixins.text(15px);
         font-weight: 700;
-        letter-spacing: -0.65px;
     }
 }

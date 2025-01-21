@@ -1,29 +1,13 @@
 <footer>
     <ul class="footer-links">
-        <li>
-            <a href="#">
-                <span>👾</span>
-                github
+        <li *ngFor="let link of footerLinks">
+            <a *ngIf="!link.isDisabled" [href]="link.url">
+                <span>{{ link.icon }}</span>
+                {{ link.text }}
             </a>
+            <span *ngIf="link.isDisabled" class="footer-links__text">
+                {{ link.text }}
+            </span>
         </li>
-        <li>
-            <a href="#">
-                <span>⬇️</span>
-                media kit
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span>📜</span>
-                terms of use
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span>🔒</span>
-                privacy policy
-            </a>
-        </li>
-        <li aria-disabled="true" class="footer-links__text">© Rainbow</li>
     </ul>
 </footer>

@@ -1,10 +1,59 @@
-<section class="kit-container">
-    <div class="information-container">
-        <h1 class="information-container__title">Give RainbowKit a spin</h1>
-        <p class="information-container__text">Make your Ethereum login experience feel right at home on your website.
-            RainbowKit allows you to fully
-            customize color, border radius, wallet providers and a lot more — all through an easy-to-use API. Get a feel
-            for it below!</p>
+<section class="kit-container" [style.backgroundColor]="kitContainerBackground">
+    <app-kit-information></app-kit-information>
+    <div class="panel">
+        <app-panel [panelBackground]="panelBackground" [panelRadius]="panelRadius"
+            (textColorChange)="updateTextColor($event)">
+        </app-panel>
+        <div class="options">
+            <ul>
+                <li>
+                    <h4 class="options__text">Modal</h4>
+                    <div aria-orientation="horizontal">
+                        <button class="options__button">
+                            <svg width="24" height="20">
+                                <use xlink:href="/svg/horizontal.svg#horizontal"></use>
+                            </svg>
+                        </button>
+                        <button class="options__button">
+                            <svg width="18" height="22">
+                                <use xlink:href="svg/vertical.svg#vertical"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <h4 class="options__text">Mode</h4>
+                    <div>
+                        <button *ngFor="let mode of modes" class="options__button" [style.backgroundColor]="mode.color"
+                            [attr.aria-selected]="selectedMode === mode.color"
+                            (click)="changePanelBackground(mode.color)">
+                        </button>
+                    </div>
+                </li>
+
+                <li>
+                    <h4 id="colorOptions" class="options__text">Accent</h4>
+                    <div>
+                        <button *ngFor="let color of accentColors" class="options__button"
+                            [style.backgroundColor]="color" [attr.aria-selected]="selectedAccent === color"
+                            (click)="changeAccentColor(color)">
+                        </button>
+                    </div>
+                </li>
+
+                <li>
+                    <h4 class="options__text">Radius</h4>
+                    <div>
+                        <button *ngFor="let radius of radio" class="options__button"
+                            [attr.aria-selected]="selectedRadius === radius.value"
+                            (click)="changePanelRadius(radius.value)">
+                            {{ radius.label }}
+                        </button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
     </div>
-    <app-panel></app-panel>
 </section>
