@@ -1,0 +1,14 @@
+<main>
+    <h4>What is a Wallet?</h4>
+    <div class="banner-container">
+        <article class="banner-container__banner" *ngFor="let article of articles">
+            <svg width="120px" height="120px">
+                <use [attr.xlink:href]="article.icon"></use>
+            </svg>
+            <div>
+                <h5>{{ article.title }}</h5>
+                <p>{{ article.description }}</p>
+            </div>
+        </article>
+    </div>
+</main>
