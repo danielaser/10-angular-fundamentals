@@ -1,10 +1,6 @@
 @use '../../ui/styles/variables.scss' as variables;
 @use '../../ui/styles/mixins.scss' as mixins;
 
-.panel {
-    justify-items: center;
-}
-
 .panel-content {
     display: flex;
     padding: 20px 20px 0 20px;
@@ -12,7 +8,12 @@
     height: 470px;
     background-color: variables.$white;
     border-radius: 15px;
+    color: black;
     box-shadow: 0 4px 14px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &.text-white {
+        color: white;
+    }
 }
 
 .panel-nav {
@@ -112,84 +113,5 @@
             color: variables.$light-blue;
             font-weight: 700;
         }
-    }
-}
-
-.options {
-    margin-top: 50px;
-
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 50px;
-    }
-
-    &__text {
-        @include mixins.text(22px, #80a7f0);
-        font-weight: 800;
-        margin-bottom: 10px;
-    }
-
-    &__button {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        border: none;
-        box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .12);
-        background: #ffffff52;
-        margin-right: 10px;
-        cursor: pointer;
-        transition: 0.5s transform;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-
-        &[aria-selected="true"] {
-            outline: 4px solid #ffffff;
-            outline-offset: 4px;
-            transform: scale(1);
-        }
-    }
-
-    &__button-text {
-        @include mixins.text(15px);
-        font-weight: 700;
-    }
-
-    #blue {
-        background-color: variables.$blue;
-    }
-
-    #dark-blue {
-        background-color: variables.$dark-blue;
-    }
-
-    #pink {
-        background-color: variables.$pink;
-    }
-
-    #red {
-        background-color: variables.$red;
-    }
-
-    #orange {
-        background-color: variables.$orange;
-    }
-
-    #green {
-        background-color: variables.$green;
-    }
-
-    #white {
-        background-color: variables.$white;
-    }
-
-    #gray {
-        background-color: variables.$dark-gray;
-    }
-
-    #black {
-        background-color: variables.$black;
     }
 }
