@@ -6,8 +6,8 @@ import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from
   styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent implements OnChanges {
-  @Input() panelBackground: string = 'rgb(255, 255, 255)'; // Default: White
-  @Input() panelRadius: string = '15px'; // Default: Large Radius
+  @Input() panelBackground: string = 'rgb(255, 255, 255)';
+  @Input() panelRadius: string = '15px';
 
   @Output() textColorChange = new EventEmitter<string>();
 
@@ -21,7 +21,7 @@ export class PanelComponent implements OnChanges {
   private getTextColor(backgroundColor: string): string {
     if (backgroundColor === 'rgb(255, 255, 255)') {
       return 'black';
-    } else if (backgroundColor === 'rgb(128, 128, 128)' || backgroundColor === 'rgb(0, 0, 0)') {
+    } else if (backgroundColor === 'rgb(26, 27, 30)' || backgroundColor === 'rgb(0, 0, 0)') {
       return 'white';
     }
     return 'black';

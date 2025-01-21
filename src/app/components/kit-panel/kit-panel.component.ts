@@ -17,9 +17,9 @@ export class KitPanelComponent {
   accentColors = ['#0e76fd', '#5f5af9', '#ff5ca0', '#fa423c', '#ff801f', '#1db847'];
 
   modes = [
-    { label: 'White', color: '#fff' },
-    { label: 'Gray', color: '#242529' },
-    { label: 'Black', color: '#000' }
+    { label: 'White', color: 'rgb(255, 255, 255)' },
+    { label: 'Gray', color: 'rgb(26, 27, 30)' },
+    { label: 'Black', color: 'rgb(0, 0, 0)' }
   ];
 
   // Opciones de radios

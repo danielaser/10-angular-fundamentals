@@ -1,0 +1,24 @@
+@use '../../ui/styles/variables.scss' as variables;
+@use '../../ui/styles/mixins.scss' as mixins;
+
+.navigation {
+    @include mixins.container-gap(15px);
+
+    &__title {
+        @include mixins.text(20px);
+    }
+
+    &__badge {
+        @include mixins.font(12px, 600);
+        background-color: variables.$smoky-gray;
+        color: #ffffff7a;
+        height: 22px;
+        line-height: 1;
+        padding: 7px;
+        border-radius: 15px;
+    }
+
+    &__item {
+        border-radius: 30%;
+    }
+}
