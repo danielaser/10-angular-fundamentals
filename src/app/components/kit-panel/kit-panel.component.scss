@@ -72,40 +72,4 @@
         @include mixins.text(15px);
         font-weight: 700;
     }
-
-    #blue {
-        background-color: variables.$blue;
-    }
-
-    #dark-blue {
-        background-color: variables.$dark-blue;
-    }
-
-    #pink {
-        background-color: variables.$pink;
-    }
-
-    #red {
-        background-color: variables.$red;
-    }
-
-    #orange {
-        background-color: variables.$orange;
-    }
-
-    #green {
-        background-color: variables.$green;
-    }
-
-    #white {
-        background-color: variables.$white;
-    }
-
-    #gray {
-        background-color: variables.$dark-gray;
-    }
-
-    #black {
-        background-color: variables.$black;
-    }
 }
