@@ -6,37 +6,13 @@
                 <h5>Popular</h5>
                 <div>
                     <menu class="sub-menu">
-                        <li class="sub-menu__item">
+                        <li class="sub-menu__item" *ngFor="let menu of menus">
                             <i aria-hidden="true">
                                 <svg>
-                                    <use xlink:href="svg/rainbow.svg#rainbow"></use>
+                                    <use [attr.xlink:href]="menu.icon"></use>
                                 </svg>
                             </i>
-                            <h4>Rainbow</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/coinbase.svg#coinbase"></use>
-                                </svg>
-                            </i>
-                            <h4>Coinbase Wallet</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/metamask.svg#metamask"></use>
-                                </svg>
-                            </i>
-                            <h4>MetaMask</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/wallet.svg#wallet"></use>
-                                </svg>
-                            </i>
-                            <h4>Wallet Connect</h4>
+                            <h4>{{ menu.name }}</h4>
                         </li>
                     </menu>
                 </div>
@@ -45,45 +21,13 @@
                 <h5>More</h5>
                 <div>
                     <menu class="sub-menu">
-                        <li class="sub-menu__item">
+                        <li class="sub-menu__item" *ngFor="let menu of moreMenus">
                             <i aria-hidden="true">
                                 <svg>
-                                    <use xlink:href="svg/argent.svg#argent"></use>
+                                    <use [attr.xlink:href]="menu.icon"></use>
                                 </svg>
                             </i>
-                            <h4>Argent</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/trust.svg#trust"></use>
-                                </svg>
-                            </i>
-                            <h4>Trust Wallet</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/omni.svg#omni"></use>
-                                </svg>
-                            </i>
-                            <h4>Omni</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/token.svg#token"></use>
-                                </svg>
-                            </i>
-                            <h4>imToken</h4>
-                        </li>
-                        <li class="sub-menu__item">
-                            <i aria-hidden="true">
-                                <svg>
-                                    <use xlink:href="svg/leader.svg#leader"></use>
-                                </svg>
-                            </i>
-                            <h4>Leader</h4>
+                            <h4>{{ menu.name }}</h4>
                         </li>
                     </menu>
                 </div>
