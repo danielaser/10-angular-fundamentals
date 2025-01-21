@@ -3,10 +3,11 @@ import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from
 import { MenuPanelComponent } from "../menu-panel/menu-panel.component";
 import { HeaderPanelComponent } from "../header-panel/header-panel.component";
 import { MainPanelComponent } from "../main-panel/main-panel.component";
+import { FooterPanelComponent } from "../footer-panel/footer-panel.component";
 
 @Component({
   selector: 'app-panel',
-  imports: [CommonModule, MenuPanelComponent, HeaderPanelComponent, MainPanelComponent],
+  imports: [CommonModule, MenuPanelComponent, HeaderPanelComponent, MainPanelComponent, FooterPanelComponent],
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss']
 })
