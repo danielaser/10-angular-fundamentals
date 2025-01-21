@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { DevelopersInformationComponent } from "../developers-information/developers-information.component";
 
 @Component({
   selector: 'app-worker-panel',
-  imports: [CommonModule],
+  imports: [CommonModule, DevelopersInformationComponent],
   templateUrl: './worker-panel.component.html',
   styleUrl: './worker-panel.component.scss'
 })

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { PanelComponent } from "../panel/panel.component";
 import { CommonModule } from '@angular/common';
+import { KitInformationComponent } from "../kit-information/kit-information.component";
 
 @Component({
   selector: 'app-kit-panel',
-  imports: [PanelComponent, CommonModule],
+  imports: [PanelComponent, CommonModule, KitInformationComponent],
   templateUrl: './kit-panel.component.html',
   styleUrls: ['./kit-panel.component.scss']
 })
@@ -22,8 +23,7 @@ export class KitPanelComponent {
     { label: 'Black', color: 'rgb(0, 0, 0)' }
   ];
 
-  // Opciones de radios
-  radii = [
+  radio = [
     { label: 'L', value: '15px' },
     { label: 'M', value: '10px' },
     { label: 'S', value: '5px' },
@@ -32,7 +32,7 @@ export class KitPanelComponent {
 
   selectedAccent: string = this.accentColors[0]; 
   selectedMode: string = this.modes[0].color; 
-  selectedRadius: string = this.radii[0].value;
+  selectedRadius: string = this.radio[0].value;
 
   changeAccentColor(color: string): void {
     this.kitContainerBackground = color;

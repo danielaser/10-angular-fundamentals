@@ -6,26 +6,6 @@
     background-color: variables.$blue;
 }
 
-.information-container {
-    text-align: center;
-    gap: 10px;
-    line-height: 1;
-    padding-inline: 250px;
-    margin-bottom: 70px;
-
-    &__title {
-        @include mixins.text(50px);
-        font-weight: 800;
-        margin-bottom: 40px;
-    }
-
-    &__text {
-        @include mixins.text(25px);
-        font-weight: 700;
-        letter-spacing: -0.65px;
-    }
-}
-
 .panel {
     justify-items: center;
 }
